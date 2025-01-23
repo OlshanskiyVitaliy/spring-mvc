@@ -7,7 +7,7 @@ public class Car {
     private String vendor;
     private String model;
     private int date;
-    private static final String header = "Vendor/" + ' ' + "Model/" + ' ' + "Date of production";
+    private static final String header = "Vendor/Model/Date of production";
 
     public Car(String vendor, String model, int date) {
         this.vendor = vendor;

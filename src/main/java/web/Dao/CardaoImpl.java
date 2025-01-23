@@ -19,12 +19,9 @@ public class CardaoImpl implements CarDao  {
     }
     @Override
     public List<Car> getCars(int  count){
-        List<Car> cars_edited = cars;
-        if (count <= 5) {
-            cars_edited = cars.stream().limit(count).collect(Collectors
-                    .toCollection(ArrayList::new));
-        }
-        return cars_edited;
+        return cars.stream()
+                .limit(count)
+                .collect(Collectors.toList());
     }
 
 }

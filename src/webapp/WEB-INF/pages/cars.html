@@ -12,8 +12,8 @@
 </div>
 <br>
 <div>
-    <th:block th:each="msg : ${cars}">
-        <h1 th:text="${msg.toStringFormatted()}"></h1>
+    <th:block th:each="car : ${cars}">
+        <h1 th:text="${car.toStringFormatted()}"></h1>
     </th:block>
 </div>
 </body>

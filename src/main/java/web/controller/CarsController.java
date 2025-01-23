@@ -10,6 +10,7 @@ import web.service.CarService;
 
 @Controller
 public class CarsController {
+
     private CarService carservice;
     private Car header;
 
@@ -19,7 +20,7 @@ public class CarsController {
         this.header = header;
     }
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "/cars")
     public String printWelcome(@RequestParam(value = "count", required = false, defaultValue = "5") Integer count, ModelMap model) {
         model.addAttribute("cars", carservice.getCars(count));
         model.addAttribute("header", header.header());
